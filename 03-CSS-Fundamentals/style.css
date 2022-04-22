@@ -4,6 +4,8 @@
   padding: 0;
 }
 
+/* PAGE SECTIONS */
+
 body {
   color: #444;
   font-family: sans-serif;
@@ -19,7 +21,8 @@ body {
 }
 
 nav {
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 article {
@@ -33,7 +36,7 @@ article {
   padding-right: 40px; */
   padding: 20px 40px;
   margin-bottom: 60px;
-  height: 80px;
+  /* height: 80px; */
 }
 
 .post-header {
@@ -47,6 +50,8 @@ aside {
   padding: 50px 0;
   width: 500px;
 }
+
+/* SMALLER ELEMENTS */
 
 h1,
 h2,
@@ -203,4 +208,18 @@ footer p {
 .post-img {
   width: 100%;
   height: auto;
+}
+
+nav a:link {
+  /* background-color: red;
+  margin: 20px;
+  padding: 20px;
+  display: block; */
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
 }
