@@ -1,8 +1,9 @@
-/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+/* rem and em do NOT depend on html -font-size in media queries!
+Instead, 1rem = 1em = 16px */
 
-/**************************/
-/* BELOW 1344px (Smaller desktops) */
-/**************************/
+/*********************************/
+/* BELOW 1344px (Smaller desktop)*/
+/*********************************/
 
 @media (max-width: 84em) {
   .hero {
@@ -18,13 +19,14 @@
   }
 }
 
-/**************************/
-/* BELOW 1200px (Landscape Tablets) */
-/**************************/
+/***********************************/
+/* BELOW 1200px (Landscape Tablets)*/
+/***********************************/
 
+/* 1200px / 16px = 75em */
 @media (max-width: 75em) {
   html {
-    /* 9px / 16px  */
+    /* 9px / 16px = 0,5625 = 56.25% */
     font-size: 56.25%;
   }
 
@@ -58,9 +60,11 @@
   }
 }
 
-/**************************/
-/* BELOW 944px (Tablets) */
-/**************************/
+/***********************************/
+/* BELOW 944px (Tablets)           */
+/***********************************/
+
+/* 944 / 16px = 75em */
 
 @media (max-width: 59em) {
   html {
@@ -109,7 +113,8 @@
   }
 
   .cta {
-    /* 3/5 = 60% + 2/5 = 40% */
+    display: grid;
+    /* 5/3 = 60% + 3/5 = 40% */
     grid-template-columns: 3fr 2fr;
   }
 
@@ -127,7 +132,7 @@
   }
 
   .main-nav {
-    background-color: rgba(255, 255, 255, 0.97);
+    background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -141,16 +146,14 @@
     transition: all 0.5s ease-in;
 
     /* Hide navigation */
-    /* Allows NO transitions at all */
+    /* Allows NO transition */
     /* display: none; */
 
-    /* 1) Hide it visually */
+    /* 1st) Hide it visually */
     opacity: 0;
-
-    /* 2) Make it unaccessible to mouse and keyboard */
+    /* 2nd) Make it unaccessible to mouse and keyboard */
     pointer-events: none;
-
-    /* 3) Hide it from screen readers */
+    /* 3rd) Hide it from screen readers */
     visibility: hidden;
   }
 
@@ -180,13 +183,14 @@
   }
 }
 
-/**************************/
-/* BELOW 704px (Smaller tablets) */
-/**************************/
+/***********************************/
+/* BELOW 704px (Smaller Tablets)   */
+/***********************************/
 
+/* 704 / 16px = 44em */
 @media (max-width: 44em) {
-  .grid--3-cols,
-  .grid--4-cols {
+  .grid--3--cols,
+  .grid--4--cols {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -219,18 +223,19 @@
   }
 }
 
-/**************************/
-/* BELOW 544px (Phones) */
-/**************************/
+/***********************************/
+/* BELOW 544 (Phones)            */
+/***********************************/
 
+/* 544px / 16px = 34em */
 @media (max-width: 34em) {
   .grid {
     row-gap: 4.8rem;
   }
 
-  .grid--2-cols,
-  .grid--3-cols,
-  .grid--4-cols {
+  .grid--2--cols,
+  .grid--3--cols,
+  .grid--4--cols {
     grid-template-columns: 1fr;
   }
 
@@ -240,12 +245,12 @@
     padding: 2.4rem 1.6rem;
   }
 
-  .section-hero {
-    padding: 2.4rem 0 6.4rem 0;
-  }
-
   .hero {
     padding: 0 3.2rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
   }
 
   .hero-img {
@@ -292,9 +297,10 @@
 }
 
 /* 
-- Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+-Font size system (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 
+44 / 52 / 62 / 74 / 86 / 98
 
-- Spacing system (px)
+-Spacing system (px):
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
+ */
