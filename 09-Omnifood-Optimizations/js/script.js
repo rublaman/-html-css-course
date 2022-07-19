@@ -1,3 +1,18 @@
+// console.log("Hola mundo!");
+
+// const h1 = document.querySelector(".heading-primary");
+// console.log(h1);
+
+// h1.addEventListener("click", function () {
+//   h1.textContent = "Ruben";
+//   h1.style.backgroundColor = "red";
+//   h1.style.padding = "5rem";
+// });
+
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
